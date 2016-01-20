@@ -6,6 +6,11 @@
         "doctrine/orm": "^2.5",
         "symfony/assetic-bundle": "^2.7"
     },
+    "keywords" : [
+        "okento",
+        "boostrap",
+        "admin"
+    ],
     "require-dev": {
 
     },
