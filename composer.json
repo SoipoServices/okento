@@ -1,0 +1,19 @@
+{
+    "name": "okento/admin-bundle",
+    "description": "A simple admin bootrap bundle",
+    "type": "symfony-bundle",
+    "require": {
+        "doctrine/orm": "^2.5",
+        "symfony/assetic-bundle": "^2.7"
+    },
+    "require-dev": {
+
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "SoipoServices Srls",
+            "email": "github@soiposervices.com"
+        }
+    ]
+}
