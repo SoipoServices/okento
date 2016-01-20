@@ -1,0 +1,18 @@
+admin.title: Member area
+profile: Profile
+logout: Log out
+toggle.navigation: Toggle navigation
+copyright: Copyright
+welcome.okento: Welcome on Okento !
+or: or
+dashboard: Dashboard
+admin: Admin
+users: Users
+
+
+button:
+  submit: Submit
+  send: Send
+
+error:
+  access.denied: You cannot access this resource

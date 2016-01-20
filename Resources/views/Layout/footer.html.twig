@@ -1,0 +1,12 @@
+{% block footer %}
+    <!-- .main-footer -->
+    <footer class="main-footer">
+        <!-- To the right -->
+        <div class="pull-right hidden-xs">
+            {{ 'footer.note'|trans|raw }}
+        </div>
+        <!-- Default to the left -->
+        <strong>{{ 'copyright' }} &copy; {{ 'now'|date('Y') }} <a href="{{ 'company.url'|trans }}">{{ 'company.name'|trans }}</a>.</strong> {{ 'company.rights'|trans }}.
+    </footer>
+    <!-- /.main-footer -->
+{% endblock %}

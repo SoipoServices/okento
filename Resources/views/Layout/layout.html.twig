@@ -1,0 +1,37 @@
+{% extends 'SoipoOkentoAdminBundle::base.html.twig' %}
+
+
+{% block body_class %}skin-blue sidebar-mini wysihtml5-supported{% endblock %}
+
+{% block body %}
+    <div class="wrapper">
+        {% include 'SoipoOkentoAdminBundle:Layout:header.html.twig' %}
+        {% block content_wrapper %}
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    {% include 'SoipoOkentoAdminBundle:Layout:flash.html.twig' %}
+                    {% block content_header %}
+                        <!-- Your Page Title Here -->
+                    {% endblock %}
+                </section>
+
+                <!-- Main content -->
+                <section class="content">
+
+                    {% block content %}
+                        <!-- Your Page Content Here -->
+                    {% endblock %}
+
+                </section>
+                <!-- /.content -->
+
+            </div>
+            <!-- /.content-wrapper -->
+        {% endblock %}
+        {% include 'SoipoOkentoAdminBundle:Layout:sidebar.html.twig' %}
+        {% include 'SoipoOkentoAdminBundle:Layout:footer.html.twig' %}
+    </div>
+{% endblock %}

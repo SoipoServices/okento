@@ -1,0 +1,3 @@
+soipo_okento_admin_dashboard:
+    path:     /dashboard
+    defaults: { _controller: SoipoOkentoAdminBundle:Admin:dashboard }

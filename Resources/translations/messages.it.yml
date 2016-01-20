@@ -1,0 +1,16 @@
+admin.title: Area amministrativa
+profile: Profilo
+logout: Esci
+toggle.navigation: Attiva navigazione
+welcome.okento: Benvenuti su Okento !
+or: o
+dashboard: Dashboard
+admin: Amministratore
+users: Utenti
+
+button:
+  submit: Invia
+  save: Salva
+
+error:
+  access.denied: Non puoi accedere a questa risorsa
