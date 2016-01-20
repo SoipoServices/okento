@@ -1,14 +1,14 @@
 services:
     soipo_okento_admin.access_manager:
         class: Soipo\Okento\AdminBundle\Manager\AccessManager
-        arguments: [@security.authorization_checker]
+        arguments: ["@security.authorization_checker"]
 
     soipo_okento_admin.menu_builder:
         class: Soipo\Okento\AdminBundle\Menu\MenuBuilder
-        arguments: [@knp_menu.factory, @translator.default, @event_dispatcher]
+        arguments: ["@knp_menu.factory", "@translator.default", "@event_dispatcher"]
         tags:
             - { name: knp_menu.menu_builder, method: createSidebarMenu, alias: sidebar } # The alias is what is used to retrieve the menu
 
     soipo_okento_admin.mail_manager:
         class: Soipo\Okento\AdminBundle\Manager\MailerManager
-        arguments: [@mailer,%mailer_sender%]
+        arguments: ["@mailer","%soipo_okento_admin.email%"]

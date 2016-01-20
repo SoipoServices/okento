@@ -22,19 +22,7 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
-                ->arrayNode('menu')
-                    ->prototype('array')
-                        ->prototype('array')
-                            ->children()
-                                ->scalarNode('name')->isRequired()->end()
-                                ->scalarNode('label')->isRequired()->end()
-                                ->scalarNode('route')->end()
-                                ->scalarNode('icon')->end()
-                                ->scalarNode('role')->end()
-                            ->end()
-                        ->end() // array
-                    ->end() // array
-                ->end() // menu
+                ->scalarNode("email")->isRequired()->end()
             ->end()
         ;
 

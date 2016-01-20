@@ -4,7 +4,8 @@
     "type": "symfony-bundle",
     "require": {
         "doctrine/orm": "^2.5",
-        "symfony/assetic-bundle": "^2.7"
+        "symfony/assetic-bundle": "^2.7",
+        "knplabs/knp-menu": "2.1"
     },
     "keywords" : [
         "okento",

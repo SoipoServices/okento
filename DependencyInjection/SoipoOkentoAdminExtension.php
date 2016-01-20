@@ -20,8 +20,8 @@ class SoipoOkentoAdminExtension extends ConfigurableExtension
     protected function loadInternal(array $configs, ContainerBuilder $container)
     {
 
-        if(array_key_exists('menu',$configs)){
-            $container->setParameter('soipo_okento_admin.menu',$configs['menu']);
+        if(array_key_exists('email',$configs)){
+            $container->setParameter('soipo_okento_admin.email',$configs['email']);
         }
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
