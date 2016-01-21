@@ -7,6 +7,10 @@
         "symfony/assetic-bundle": "^2.7",
         "knplabs/knp-menu": "^2.1"
     },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": { "Soipo\\Okento\\AdminBundle\\": "" }
+    },
     "keywords" : [
         "okento",
         "boostrap",
