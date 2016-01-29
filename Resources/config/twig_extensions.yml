@@ -1,0 +1,5 @@
+services:
+    soipo_okento_admin.twig_extension.flash_meassages:
+          class: Soipo\Okento\AdminBundle\Twig\AdminTwigExtension
+          tags:
+            - { name: twig.extension }

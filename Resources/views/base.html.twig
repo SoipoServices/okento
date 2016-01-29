@@ -1,41 +1,56 @@
-{% extends 'base.html.twig' %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{{ title|default('Welcome')|trans({}) }}</title>
+    {% block stylesheets %}
+        {% stylesheets
+        '@SoipoOkentoAdminBundle/Resources/public/css/bootstrap.min.css'
+        '@SoipoOkentoAdminBundle/Resources/public/css/AdminLTE.min.css'
+        '@SoipoOkentoAdminBundle/Resources/public/css/skins/skin-blue.min.css'
+        filter='?cssrewrite'
+        %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
-{% block title %}{{ parent() }} - {{ 'admin.title'| trans }}{% endblock %}
+    {% endblock stylesheets %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    {% block head_javascripts %}
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    {% endblock head_javascripts %}
+</head>
+<body class="{{ body_class|default('hold-transition login-page') }}">
+{% block body %}
+    {% block content %}{% endblock content %}
+    <div class="footer"><div class="content-box"></div></div>
 
-{% block stylesheets %}
-    {% stylesheets
-    '@SoipoOkentoAdminBundle/Resources/public/css/bootstrap.min.css'
-    '@SoipoOkentoAdminBundle/Resources/public/css/AdminLTE.min.css'
-    '@SoipoOkentoAdminBundle/Resources/public/css/skins/skin-blue.min.css'
-    filter='?cssrewrite'
-    %}
-    <link rel="stylesheet" href="{{ asset_url }}" />
-    {% endstylesheets %}
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <!-- Ionicons -->
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-
-{% endblock %}
-
-{% block head_javascripts %}
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-{% endblock %}
+    {% block javascripts %}
+        {% javascripts
+        'SoipoOkentoAdminBundle/Resources/public/js/jQuery/jQuery-2.1.4.min.js'
+        '@SoipoOkentoAdminBundle/Resources/public/js/bootstrap.min.js'
+        '@SoipoOkentoAdminBundle/Resources/public/plugins/datatables/jquery.dataTables.min.js'
+        '@SoipoOkentoAdminBundle/Resources/public/plugins/datatables/dataTables.bootstrap.min.js'
+        '@SoipoOkentoAdminBundle/Resources/public/js/app.min.js'
+        %}
+        <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    {% endblock javascripts %}
+{% endblock body %}
+</body>
+</html>
 
 
-{% block javascripts %}
-    {% javascripts
-    '@SoipoOkentoAdminBundle/Resources/public/js/jQuery/jQuery-2.1.4.min.js'
-    '@SoipoOkentoAdminBundle/Resources/public/js/bootstrap.min.js'
-    '@SoipoOkentoAdminBundle/Resources/public/plugins/datatables/jquery.dataTables.min.js'
-    '@SoipoOkentoAdminBundle/Resources/public/plugins/datatables/dataTables.bootstrap.min.js'
-    '@SoipoOkentoAdminBundle/Resources/public/js/app.min.js'
-    %}
-    <script src="{{ asset_url }}"></script>
-    {% endjavascripts %}
-{% endblock %}
+
+
+
+
+
