@@ -9,6 +9,14 @@ dashboard: Dashboard
 admin: Admin
 users: Users
 
+site.title: Okento Admin
+site.title.mini: Okento
+footer.note: This admin has been created by <a href="http://soiposervices.com">SoipoServices</a>
+
+company.url: http://soiposervices.com
+company.name:  SoipoServices
+company.rights: All rights reserved
+copyright: Copyright
 
 button:
   submit: Submit
